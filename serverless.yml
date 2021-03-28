@@ -1,0 +1,21 @@
+service: teste-http
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  stage: local
+  region: us-east-1
+  timeout: 10
+  memorySize: 512
+  versionFunctions: false
+
+plugins:
+  - serverless-offline
+
+functions:
+  helloworld:
+    handler: handler.hello
+    events:
+      - http:
+          path: /
+          method: get

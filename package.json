@@ -1,0 +1,15 @@
+{
+  "name": "teste-serverless",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon --exec serverless offline start --stage local --service=teste-http"
+  },
+  "devDependencies": {
+    "serverless-offline": "^6.8.0"
+  },
+  "dependencies": {
+    "global": "^4.4.0",
+    "nodemon": "^2.0.7"
+  }
+}
